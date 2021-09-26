@@ -3539,10 +3539,10 @@ let api = function Binance( options = {} ) {
                             resolve( response );
                         }
                     }
-                    signedRequest( wapi + 'v3/tradeFee.html', params, callback );
+                    signedRequest( sapi + 'v1/asset/tradeFee' /*wapi + 'v3/tradeFee.html'*/, params, callback );
                 } )
             } else {
-                signedRequest( wapi + 'v3/tradeFee.html', params, callback );
+                signedRequest( sapi + 'v1/asset/tradeFee' /*wapi + 'v3/tradeFee.html'*/, params, callback );/*qwe*/
             }
         },
 
