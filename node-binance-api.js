@@ -5532,7 +5532,7 @@ let api = function Binance( options = {} ) {
              */
             depth: function depth ( symbols, callback, opt = {} ) {
                 let reconnect = () => {
-                    if ( Binance.options.reconnect ) depth( symbols, callback );
+                    if ( Binance.options.reconnect ) depth( symbols, callback, opt );
                 };
                 let subscription;
                 let updateSpeed = (opt.updateSpeed || '100ms');
